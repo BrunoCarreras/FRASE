@@ -41,7 +41,7 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 1.1rem 0;
   gap: 1rem;
@@ -209,4 +209,40 @@ footer {
   .bullet-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: var(--white);
+}
+
+.btn-whatsapp:hover {
+  background: #1fb95a;
+}
+
+.contact-mails {
+  margin-top: 1rem;
+  color: var(--gray-900);
+}
+
+@media (min-width: 760px) {
+  .cta-actions {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+.cta .container > p {
+  margin-inline: auto;
+  text-align: center;
+  max-width: 640px;
 }
